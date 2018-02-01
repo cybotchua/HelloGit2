@@ -9,17 +9,36 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let myGender : Gender = .both
+    let yourGender = Gender.both
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        sayHello(gender: myGender)
+
+        
+        
+    }
+    
+    func sayHello(gender: Gender) {
+        print("My gender is ")
+        print(gender.rawValue)
+    }
+    
+    func func1(gender: Gender) {
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 
+
+}
+
+
+enum Gender : String {
+    case male
+    case female
+    case both
 }
 
